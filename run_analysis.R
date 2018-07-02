@@ -1,9 +1,9 @@
 # read and build training data
-subject_train <- read.table('./wearable/train/subject_train.txt')
+subject_train <- read.table('subject_train.txt')
 
-activity_train <- read.table('./wearable/train/y_train.txt')
+activity_train <- read.table('y_train.txt')
 
-data_train <- read.table('./wearable/train/X_train.txt')
+data_train <- read.table('X_train.txt')
 
 data_train <- cbind(activity_train, data_train)
 
@@ -11,18 +11,18 @@ data_train <- cbind(subject_train, data_train)
 
 
 # read and build test data 
-subject_test <- read.table('./wearable/test/subject_test.txt')
+subject_test <- read.table('subject_test.txt')
 
-activity_test <- read.table('./wearable/test/y_test.txt')
+activity_test <- read.table('y_test.txt')
 
-data_test <- read.table('./wearable/test/X_test.txt')
+data_test <- read.table('X_test.txt')
 
 data_test <- cbind(activity_test, data_test)
 
 data_test <- cbind(subject_test, data_test)
 
 # load featcher names
-features <- read.table('./wearable/features.txt')
+features <- read.table('features.txt')
 
 # combine test and training data into one data set
 all_data <- rbind(data_test, data_train)
